@@ -1,0 +1,81 @@
+
+
+.chat-messages-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  /* Restrict height */
+  overflow-y: auto;
+  bottom: 10px;
+}
+
+.chat__box__input {
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  resize: none;
+  /* Prevents resizing of the textarea */
+  width: calc(100% - 50px);
+  /* Ensures it fits well with the send button */
+  padding: 10px;
+  bottom: 20px;
+}
+.chat__box__text-box {
+  animation: fadeIn 0.3s ease-in-out;
+  max-width: 100%;
+  word-wrap: break-word; /* Breaks long words */
+  overflow-wrap: break-word; /* Ensures long words break to fit */
+  word-break: break-word; /* Prevents word overflow */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-input-container {
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.chat-input-container button {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.chat-input-container button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.chat__box__text-box {
+  animation: fadeIn 0.3s ease-in-out;
+  max-width: 100%;
+  /* Ensures text boxes fit within container */
+  word-wrap: break-word;
+  /* Breaks long words */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

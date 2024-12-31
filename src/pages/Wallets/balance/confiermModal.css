@@ -1,0 +1,152 @@
+/* Modal Background (Blur Effect) */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    backdrop-filter: blur(8px);
+    /* Apply blur effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    /* Ensure it appears above most elements */
+}
+
+/* Modal Container */
+.modal-dialog {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    z-index: 50;
+    /* Ensure it's above the blur background */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Background */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Modal Dialog */
+.modal-dialog {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+/* Modal Content */
+.modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-header button:hover {
+    color: #000;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-body .text-gray-600 {
+    color: #4a5568;
+    font-size: 0.875rem;
+}
+
+.modal-body p {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+/* Modal Footer */
+.modal-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cheek {
+    color: rgb(81, 180, 81);
+    font-weight: bold;
+}
+
+.ttttt {
+    color: rgb(81, 180, 81);
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
